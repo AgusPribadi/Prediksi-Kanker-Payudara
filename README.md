@@ -1,7 +1,7 @@
 # UAS-Data-Mining
 Aplikasi Data Mining Prediksi Kanker Payudara
 
-Ini merupakan project akhir mata kuliah Data Mining dengan menggunakan algoritma random forest terhadap dataset Breast Cancer.
+Ini merupakan project akhir mata kuliah Data Mining dengan menggunakan algoritma Random Forest terhadap dataset Breast Cancer.
 
 Pengujian data mendapatkan nilai akurasi 0.8947368421052632
 
