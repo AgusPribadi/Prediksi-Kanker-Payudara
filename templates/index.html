@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prediksi Kanker Payudara</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+
+  <body>
+    <div class="container contact-form">
+      <div class="contact-image">
+        <img src="{{ url_for('static', filename='img/breast-cancer-logo.webp') }}" alt="breast_cancer" />
+      </div>
+      <form action="{{ url_for('predict')}}" method="POST">
+        <h3>Prediksi Penyakit Kanker Payudara</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" name="texture_mean" class="form-control" placeholder="Texture Mean" required="required" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="smoothness_mean" class="form-control" placeholder="Smoothness Mean" required="required" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="compactness_mean" class="form-control" placeholder="Compactness Mean" required="required" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="symmetry_mean" class="form-control" placeholder="Symmetry Mean" required="required" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="fractal_dimension_mean" class="form-control" placeholder="Fractal Dimension Mean" required="required" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="texture_se" class="form-control" placeholder="Texture SE" required="required" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="smoothness_se" class="form-control" placeholder="Smoothness SE" required="required" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="symmetry_se" class="form-control" placeholder="Symmetry SE" required="required" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="symmetry_worst" class="form-control" placeholder="Symmetry Worst" required="required" />
+            </div>
+
+            <button id="sub" type="submit" class="btn btn-primary btn-block btn-large">Prediksi</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>
